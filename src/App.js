@@ -1,13 +1,9 @@
 import React, { Component } from "react";
-import $ from "jquery";
 import './App.css'; 
 import Navigation from './components/Navigation'
 import Board from './components/Board'
 import ActionCable from "actioncable"
 const url = 'http://localhost:3000/guesses'
-
-
-
 
 class App extends Component {
   constructor() {
@@ -16,7 +12,6 @@ class App extends Component {
       clickedButtons: []
     };
   }
-
   componentDidMount() {
     fetch("http://localhost:3000/api/v1/guesses.json").then(data => {
       data.json().then(res => {
@@ -70,17 +65,19 @@ class App extends Component {
   
 
   render() {
-
-    return <div className="App">
-        <div className="App-header">
-          <Navigation />
+    return (
+      <div>
+        <Navigation />
         <Board handleChange={this.postGuess} />
-        </div>
+
         <div className="App-intro">
           <div>{/* status */}</div>
           <ol>{/* TODO */}</ol>
         </div>
-      </div>;
+      </div>
+    )
+    
+        
   }
 }
 

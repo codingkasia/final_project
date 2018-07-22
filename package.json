@@ -4,7 +4,9 @@
   "private": true,
   "dependencies": {
     "actioncable": "^5.2.0",
+    "auth0-js": "^9.7.2",
     "bootstrap": "^3.3.7",
+    "history": "^4.7.2",
     "moment": "^2.18.0",
     "react": "^16.4.1",
     "react-actioncable-provider": "^1.0.3",
